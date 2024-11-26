@@ -28,6 +28,8 @@
             }
             #section_chat > div:first-child {
                 height: 95%;
+                padding: 0 12px;
+                background-color: gainsboro;
             }
             #section_chat > div:last-child {
                 display: flex;
@@ -38,8 +40,13 @@
                 width: 70%;
                 height: 100%;
             }
-
+            #chat_log {
+                overflow-x: hidden;
+            }
             .chat_bubble {
+                margin: 12px 0;
+                border: 1px solid black;
+                background-color: aliceblue;
                 width: 100%;
                 border-radius: 10px;
                 background-color: white;
@@ -50,11 +57,12 @@
         <script type="module" src="app.js"></script>
         <div id="container_top">
             <section id="section_video">비디오 스트리밍</section>
+            <!-- 채팅 section asid로 변경하기 -->
             <section id="section_chat">
                 <div id="chat_log">채팅로그</div>
                 <div>
-                    <input id="chat_input" type="text" />
-                    <button type="button" class="btn_enter">입력</button>
+                        <!-- input -> textarea로 변경하기 -->
+                        <input id="chat_input" type="text" /> <button type="button" class="btn_enter">입력</button>
                 </div>
             </section>
         </div>
