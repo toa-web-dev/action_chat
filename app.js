@@ -5,7 +5,7 @@ window.onload = () => {
 };
 const $btn_button = document.body.querySelector(".btn_enter");
 const $chat_input = document.body.querySelector("#chat_input");
-
+const $chat_log = document.body.querySelector("#chat_log");
 /**
  * @description 이벤트리스너 초기화 함수
  */
@@ -26,6 +26,7 @@ function loggingBubble() {
     const chatText = $chat_input.value;
     if (chatText.length > 0) {
         document.body.querySelector("#chat_log").appendChild(ChatBubble(chatText));
+        $chat_log.scrollTop = $chat_log.scrollHeight;
     }
     $chat_input.value = "";
     $chat_input.focus();
